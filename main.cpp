@@ -1,3 +1,5 @@
+//Copyright (C) 2024 BlazeSnow. All Rights reserved.
+//This program is released under the terms of the GNU General Public License v3.0.
 #include <iostream>
 #include <algorithm>
 
@@ -15,7 +17,7 @@ void input() {
     while (true) {
         //记录是否有数据不在范围内
         int error = 0;
-        cout << "请输入四个数字(以空格隔开):" << endl;
+        cout << "Please enter four numbers (separated by Spaces):" << endl;
         for (auto &i: number) {
             cin >> i;
             if (!(0 < i && i <= 13)) {
@@ -27,7 +29,7 @@ void input() {
             break;
         } //如果有不在范围内的数据
         else {
-            cout << "ERROR:数字范围应当为1~13" << endl << endl;
+            cout << "ERROR: The value ranges from 1 to 13" << endl << endl;
         }
     }
 }
@@ -62,10 +64,13 @@ static int parenthesis2(int num[], char cul[]) {
 }
 
 int main() {
+    cout << "Copyright (C) 2024 BlazeSnow. All Rights reserved." << endl;
+    cout << "This program is released under the terms of the GNU General Public License v3.0." << endl << endl;
+    cout << "https://github.com/BlazeSnow/24-point-calculation" << endl << endl;
     //输入4个数据
     input();
     //进入函数进行运算
-    cout << "有以下结果:" << endl;
+    cout << "There are the following results:" << endl;
     //从小到大排序数组
     sort(number, number + 4);
     //排列组合数字和符号
@@ -95,6 +100,6 @@ int main() {
         //用next_permutation排列组合数字并输入主程序中进行运算
     } while (next_permutation(number, number + 4));
     //输出次数
-    cout << "共有" << times << "个答案" << endl;
+    cout << "There are " << times << " answers" << endl;
     return 0;
 }
