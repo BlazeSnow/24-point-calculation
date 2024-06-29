@@ -101,5 +101,6 @@ int main() {
     } while (next_permutation(number, number + 4));
     //输出次数
     cout << "There are " << times << " answers" << endl;
+    system("pause");
     return 0;
 }
