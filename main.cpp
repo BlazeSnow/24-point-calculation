@@ -65,8 +65,8 @@ static int parenthesis2(int num[], char cul[]) {
 }
 
 int main() {
-    cout << "Copyright (C) 2024 BlazeSnow. All Rights reserved." << endl;
-    cout << "This program is released under the terms of the GNU General Public License v3.0." << endl << endl;
+    cout << "Copyright (C) 2024 BlazeSnow.保留所有权利。" << endl;
+    cout << "本程序以GNU General Public License v3.0的条款发布。" << endl << endl;
     cout << "https://github.com/BlazeSnow/24-point-calculation" << endl << endl;
     //输入4个数据
     input();
