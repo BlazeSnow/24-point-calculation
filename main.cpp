@@ -72,7 +72,7 @@ int main() {
     SetConsoleOutputCP(54936);
     cout << "Copyright (C) 2024 BlazeSnow.保留所有权利。" << endl;
     cout << "本程序以GNU General Public License v3.0的条款发布。" << endl;
-    cout << "当前程序版本号：v1.2.0" << endl;
+    cout << "当前程序版本号：v1.2.1" << endl;
     cout << "https://github.com/BlazeSnow/24-point-calculation" << endl << endl;
     //输入4个数据
     input();
