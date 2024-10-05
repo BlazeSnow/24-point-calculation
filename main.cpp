@@ -7,9 +7,9 @@
 using namespace std;
 
 //数据存放
-int number[4] = {0};
+int number[4] = { 0 };
 //符号存放
-const char Symbol[4] = {'+', '-', '*', '/'};
+const char Symbol[4] = { '+', '-', '*', '/' };
 //统计算了多少次
 int times = 0;
 
@@ -19,7 +19,7 @@ void input() {
 		//记录是否有数据不在范围内
 		int error = 0;
 		cout << "请输入四个数字(以空格隔开):" << endl;
-		for (auto &i: number) {
+		for (auto& i : number) {
 			cin >> i;
 			if (!(0 < i && i <= 13)) {
 				error++;
@@ -39,13 +39,17 @@ void input() {
 static int operation(int a, int b, char cul) {
 	if (cul == '+') {
 		return a + b;
-	} else if (cul == '-') {
+	}
+	else if (cul == '-') {
 		return a - b;
-	} else if (cul == '*') {
+	}
+	else if (cul == '*') {
 		return a * b;
-	} else if ((cul == '/') && (a % b == 0)) {
+	}
+	else if ((cul == '/') && (a % b == 0)) {
 		return a / b;
-	} else {
+	}
+	else {
 		return -1000;
 	}
 }
@@ -79,11 +83,11 @@ int main() {
 	//排列组合数字和符号
 	do {
 		//排列组合符号
-		for (char i: Symbol) {
-			for (char j: Symbol) {
-				for (char k: Symbol) {
+		for (char i : Symbol) {
+			for (char j : Symbol) {
+				for (char k : Symbol) {
 					//定义运算用的加减乘除字符数组
-					char cul[3] = {i, j, k};
+					char cul[3] = { i, j, k };
 					if (parenthesis1(number, cul) == 24) {
 						cout << "((" << number[0] << cul[0] << number[1] << ") ";
 						cout << cul[1] << number[2] << " )";
