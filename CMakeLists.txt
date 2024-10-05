@@ -5,5 +5,4 @@ set(CMAKE_CXX_STANDARD 23)
 
 include_directories(.)
 
-add_executable(24_point_calculation
-        main.cpp)
+add_executable(24_point_calculation main.cpp)
