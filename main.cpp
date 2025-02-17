@@ -1,4 +1,5 @@
 ﻿#include <algorithm>
+#include <cstdlib>
 #include <iostream>
 
 using namespace std;
@@ -63,9 +64,9 @@ static int parenthesis2(int num[], char cul[]) {
 
 int main() {
   system("chcp 65001");
-  cout << "Copyright (C) 2024 BlazeSnow.保留所有权利。" << endl;
-  cout << "本程序以GNU General Public License v3.0的条款发布。" << endl;
-  cout << "当前程序版本号：v1.2.4" << endl;
+  system("cls");
+  cout << "Copyright (C) 2024-2025 BlazeSnow. 保留所有权利。" << endl;
+  cout << "当前程序版本号：v1.2.5" << endl;
   cout << "https://github.com/BlazeSnow/24-point-calculation" << endl << endl;
   // 输入4个数据
   input();
