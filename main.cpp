@@ -16,7 +16,7 @@ void input() {
     while (true) {
         // 记录是否有数据不在范围内
         int error = 0;
-        cout << "请输入四个数字(以空格隔开):" << endl;
+        printf("请输入四个数字（以空格隔开）：\n");
         for (auto &i: number) {
             cin >> i;
             if (!(0 < i && i <= 13)) {
@@ -28,7 +28,7 @@ void input() {
             break;
         } // 如果有不在范围内的数据
         else {
-            cout << "ERROR:数字范围应当为1~13" << endl << endl;
+            fprintf(stderr, "ERROR:数字范围应当为1~13\n");
         }
     }
 }
@@ -65,13 +65,14 @@ static int parenthesis2(int num[], char cul[]) {
 int main() {
     system("chcp 65001");
     system("cls");
-    cout << "Copyright (C) 2024-2025 BlazeSnow. 保留所有权利。" << endl;
-    cout << "当前程序版本号：v1.2.5" << endl;
-    cout << "https://github.com/BlazeSnow/24-point-calculation" << endl << endl;
+    printf("Copyright (C) 2024-2025 BlazeSnow. 保留所有权利。\n");
+    printf("当前程序版本号：v1.2.5\n");
+    printf("https://github.com/BlazeSnow/24-point-calculation\n\n");
+
     // 输入4个数据
     input();
     // 进入函数进行运算
-    cout << "有以下结果:" << endl;
+    printf("有以下结果:\n");
     // 从小到大排序数组
     sort(number, number + 4);
     // 排列组合数字和符号
@@ -83,15 +84,13 @@ int main() {
                     // 定义运算用的加减乘除字符数组
                     char cul[3] = {i, j, k};
                     if (parenthesis1(number, cul) == 24) {
-                        cout << "((" << number[0] << cul[0] << number[1] << ") ";
-                        cout << cul[1] << number[2] << " )";
-                        cout << cul[2] << number[3] << " = 24" << endl;
+                        printf("((%d%c%d) %c%d )%c%d = 24\n", number[0], cul[0], number[1], cul[1], number[2], cul[2],
+                               number[3]);
                         times++;
                     }
                     if (parenthesis2(number, cul) == 24) {
-                        cout << "(" << number[0] << cul[0] << number[1] << ") ";
-                        cout << cul[1] << " (" << number[2];
-                        cout << cul[2] << number[3] << ") = 24" << endl;
+                        printf("(%d%c%d) %c (%d%c%d) = 24\n", number[0], cul[0], number[1], cul[1], number[2], cul[2],
+                               number[3]);
                         times++;
                     }
                 }
@@ -101,7 +100,7 @@ int main() {
         // 用next_permutation排列组合数字并输入主程序中进行运算
     } while (next_permutation(number, number + 4));
     // 输出次数
-    cout << "共有" << times << "个答案" << endl;
+    printf("共有%d个答案\n", times);
     system("pause");
     return 0;
 }
