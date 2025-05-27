@@ -66,7 +66,7 @@ int main() {
     system("chcp 65001");
     system("cls");
     printf("Copyright (C) 2024-2025 BlazeSnow. 保留所有权利。\n");
-    printf("当前程序版本号：v1.2.5\n");
+    printf("当前程序版本号：v1.2.6\n");
     printf("https://github.com/BlazeSnow/24-point-calculation\n\n");
 
     // 输入4个数据
