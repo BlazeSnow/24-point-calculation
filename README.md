@@ -1,8 +1,3 @@
 # 计算二十四点
-n> 此项目已迁移至 [CppWorkspace](https://github.com/BlazeSnow/CppWorkspace/tree/main/TwentyFourPointCalculation)
 
-1. 此项目用于计算二十四点
-2. 程序开始后，直接输入```四个数字```后回车即可
-3. 数字之间以```空格```隔开
-4. 数字范围为```1~13```
-
+> 此项目已迁移至 [CppWorkspace](https://github.com/BlazeSnow/CppWorkspace/tree/main/TwentyFourPointCalculation)
