@@ -36,4 +36,4 @@ sudo chmod +x <可执行文件>
 
 ## 版权
 
-Copyright (C) 2024-2026 BlazeSnow. 保留所有权利。
+Copyright © 2024-2026 BlazeSnow. 保留所有权利。
