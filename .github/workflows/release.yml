@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, ubuntu-24.04-arm, macos-latest, macos-26-intel, windows-latest, windows-11-arm ]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v7
+
+    - uses: BlazeSnow/release-cpp-action@main
+      with:
+        name: 24-point-calculation
+        base-dir: src
+        release: true
+        prerelease: ${{ contains(github.ref_name, '-') }}
