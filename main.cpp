@@ -1,7 +1,3 @@
-// 计算二十四点 (24-point-calculation)
-// 源码: https://github.com/BlazeSnow/24-point-calculation
-// 作者: BlazeSnow
-
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>
@@ -69,7 +65,7 @@ int main() {
     system("clear");
 #endif
 
-    printf("Copyright (C) 2024-2026 BlazeSnow. 保留所有权利。\n");
+    printf("Copyright (C) 2024-2026 BlazeSnow.\n");
     printf("https://github.com/BlazeSnow/24-point-calculation\n\n");
 
     input();
