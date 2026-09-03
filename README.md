@@ -34,6 +34,6 @@ sudo chmod +x <可执行文件>
 
 见 [CHANGELOG.md](./CHANGELOG.md)
 
-## 版权
+## 许可证
 
-Copyright © 2024-2026 BlazeSnow. 保留所有权利。
+[MIT](./LICENSE)
