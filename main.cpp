@@ -6,6 +6,10 @@
 #include <cstdio>
 #include <cstdlib>
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 using namespace std;
 
 int number[4] = {0};
@@ -57,8 +61,14 @@ static int parenthesis2(int num[], char cul[]) {
 }
 
 int main() {
-    system("chcp 65001");
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     system("cls");
+#else
+    system("clear");
+#endif
+
     printf("Copyright (C) 2024-2026 BlazeSnow. 保留所有权利。\n");
     printf("https://github.com/BlazeSnow/24-point-calculation\n\n");
 
@@ -85,6 +95,11 @@ int main() {
         }
     } while (next_permutation(number, number + 4));
     printf("共有%d个答案\n", times);
-    system("pause");
+    
+    printf("按回车键继续...");
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) {
+    }
+    getchar();
     return 0;
 }
