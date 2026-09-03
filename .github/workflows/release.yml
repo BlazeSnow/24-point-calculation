@@ -22,6 +22,9 @@ jobs:
     - uses: BlazeSnow/release-cpp-action@main
       with:
         name: 24-point-calculation
-        base-dir: src
+        base-dir: .
         release: true
+        release-body: https://github.com/BlazeSnow/24-point-calculation/blob/main/CHANGELOG.md
+        release-name: ${{ github.ref_name }}
         prerelease: ${{ contains(github.ref_name, '-') }}
+        tag: ${{ github.ref_name }}
