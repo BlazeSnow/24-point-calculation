@@ -61,7 +61,7 @@ int main() {
     system("cls");
     printf("Copyright (C) 2024-2026 BlazeSnow. 保留所有权利。\n");
     printf("当前程序版本号：v1.2.7\n");
-    printf("https://github.com/BlazeSnow/CppWorkspace\n\n");
+    printf("https://github.com/BlazeSnow/24-point-calculation\n\n");
 
     input();
     printf("有以下结果:\n");
