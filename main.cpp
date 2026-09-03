@@ -16,7 +16,7 @@ void input() {
     while (true) {
         int error = 0;
         printf("请输入四个数字（以空格隔开）：\n");
-        for (auto &i : number) {
+        for (auto &i: number) {
             scanf("%d", &i);
             if (!(0 < i && i <= 13)) {
                 error++;
@@ -67,9 +67,9 @@ int main() {
     printf("有以下结果:\n");
     sort(number, number + 4);
     do {
-        for (char i : Symbol) {
-            for (char j : Symbol) {
-                for (char k : Symbol) {
+        for (char i: Symbol) {
+            for (char j: Symbol) {
+                for (char k: Symbol) {
                     char cul[3] = {i, j, k};
                     if (parenthesis1(number, cul) == 24) {
                         printf("((%d%c%d) %c%d )%c%d = 24\n", number[0], cul[0], number[1], cul[1], number[2], cul[2],
